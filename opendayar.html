@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>AR.js Example</title>
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+    <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+  </head>
+  <body style="margin: 0; overflow: hidden;">
+    <a-scene embedded arjs>
+      <!-- Aggiungi il marker di riferimento per AR -->
+      <a-marker preset="hiro">
+        <!-- Aggiungi un cubo posizionato distante dal marker e che ruota con immagine sulle facce -->
+        <a-box position="0 0.5 -2" rotation="0 45 0" material="src: url(https://i.imgur.com/Jpvj3Gd.png); repeat: no; opacity: 1; side: double;">
+          <a-animation attribute="rotation" to="360 360 360" dur="5000" repeat="indefinite"></a-animation>
+        </a-box>
+      </a-marker>
+      <!-- Aggiungi una camera -->
+      <a-entity camera></a-entity>
+    </a-scene>
+  </body>
+</html>
+
